@@ -4,9 +4,9 @@ use Exception;
 
 trait DecryptByPhrase
 {
-    public function decrypt($string, $password = null): ?string
+    public function decrypt($string, $password): ?string
     {
-        if (is_null($string)) {
+        if (is_null($string) || is_null($password)) {
             return null;
         }
 
